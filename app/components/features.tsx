@@ -111,11 +111,22 @@ export default function Features() {
                   <div className="grid gap-6 md:grid-cols-2">
                     <div className="overflow-hidden bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-1">
                       <div className="h-full w-full overflow-hidden bg-black">
-                        <img
-                          src={selectedFeatureData.image || "/placeholder.svg"}
-                          alt={selectedFeatureData.title}
-                          className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
+                        {selectedFeatureData.id === "rdgp" ? (
+                          <iframe
+                            src="https://www.youtube.com/embed/tJlBt4FdQfE"
+                            title={selectedFeatureData.title}
+                            frameBorder="0"
+                            allow="autoplay; encrypted-media"
+                            allowFullScreen
+                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        ) : (
+                          <img
+                            src={selectedFeatureData.image || "/placeholder.svg"}
+                            alt={selectedFeatureData.title}
+                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                          />
+                        )}
                       </div>
                     </div>
                     <div className="flex flex-col justify-center p-6">
