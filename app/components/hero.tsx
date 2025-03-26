@@ -2,19 +2,26 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [isMuted, setIsMuted] = useState(true)
 
   useEffect(() => {
-    // Ensure video plays when component mounts
     if (videoRef.current) {
       videoRef.current.play().catch((error) => {
         console.error("Video autoplay failed:", error)
       })
     }
   }, [])
+
+  const toggleSound = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted
+      setIsMuted(!isMuted)
+    }
+  }
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
@@ -38,6 +45,25 @@ export default function Hero() {
 
         {/* Dark overlay/mask for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
+
+        {/* 添加音量控制按钮 */}
+        <button
+          onClick={toggleSound}
+          className="absolute bottom-4 right-4 z-20 rounded-full bg-black/50 p-2 text-white hover:bg-black/70"
+        >
+          {isMuted ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+              <line x1="23" y1="9" x2="17" y2="15"/>
+              <line x1="17" y1="9" x2="23" y2="15"/>
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+            </svg>
+          )}
+        </button>
       </div>
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
