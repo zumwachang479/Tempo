@@ -6,15 +6,41 @@ import { useEffect, useRef, useState } from "react"
 
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [isMuted, setIsMuted] = useState(true)
 
+  const videoUrls = [
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gBR_sBM_c01_d04_mBR0_ch01.mp4",
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gBR_sBM_c03_d04_mBR0_ch01.mp4",
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gBR_sBM_c05_d04_mBR2_ch03.mp4",
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gBR_sBM_c07_d06_mBR2_ch07.mp4",
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gHO_sBM_c04_d19_mHO2_ch03.mp4",
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gHO_sBM_c09_d21_mHO5_ch05.mp4",
+    "https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gMH_sBM_c01_d23_mMH1_ch03.mp4",
+  ]
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play().catch((error) => {
         console.error("Video autoplay failed:", error)
       })
+  
+      const handleVideoEnd = () => {
+        let newIndex
+        do {
+          newIndex = Math.floor(Math.random() * videoUrls.length)
+        } while (videoUrls.length > 1 && newIndex === currentVideoIndex)
+        setCurrentVideoIndex(newIndex)
+      }
+  
+      videoRef.current.addEventListener("ended", handleVideoEnd)
+  
+      return () => {
+        if (videoRef.current) {
+          videoRef.current.removeEventListener("ended", handleVideoEnd)
+        }
+      }
     }
-  }, [])
+  }, [currentVideoIndex])
 
   const toggleSound = () => {
     if (videoRef.current) {
@@ -31,15 +57,12 @@ export default function Hero() {
           ref={videoRef}
           className="h-full w-full object-cover"
           autoPlay
-          loop
+          loop={false}
           muted
           playsInline
           poster="/placeholder.svg?height=1080&width=1920"
+          src={videoUrls[currentVideoIndex]}
         >
-          <source
-            src="https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/gBR_sBM_c01_d04_mBR1_ch06.mp4"
-            type="video/mp4"
-          />
           Your browser does not support the video tag.
         </video>
 

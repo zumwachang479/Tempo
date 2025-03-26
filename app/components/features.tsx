@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Music2, ShoppingBag, Coins, Cpu, Award } from "lucide-react"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Music2, ShoppingBag, Coins, Cpu, Award } from "lucide-react";
 
 export default function Features() {
-  const [selectedFeature, setSelectedFeature] = useState("rdgp")
+  const [selectedFeature, setSelectedFeature] = useState("rdgp");
 
   const features = [
     {
@@ -16,7 +16,7 @@ export default function Features() {
       title: "Tempo Dance Generation Protocol",
       description:
         "Upload music to generate customized dance videos using AI powered by GANs and diffusion models. Community verification ensures quality and copyright compliance before minting dynamic NFTs.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/image/1.jpg",
     },
     {
       id: "market",
@@ -24,7 +24,7 @@ export default function Features() {
       title: "Music & Dance NFT Marketplace",
       description:
         "Trade dynamic NFTs that evolve with music updates. Access tiered content from previews to editable versions, with smart contracts ensuring fair revenue sharing and copyright tracking.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/image/2.jpg",
     },
     {
       id: "fund",
@@ -32,15 +32,15 @@ export default function Features() {
       title: "Decentralized Creative Fund",
       description:
         "Support creators through DAO donations, micropayments, and NFT revenue sharing. Reward outcomes and crowdfund niche creative projects in the Tempo ecosystem.",
-      image: "/placeholder.svg?height=400&width=600",
-    },
+        image: "/image/3.jpg",
+      },
     {
       id: "compute",
       icon: <Cpu className="h-6 w-6" />,
       title: "Dance Compute Market",
       description:
         "Access privacy-preserving computation networks for dance generation. Trade algorithm NFTs with dynamic pricing based on complexity and resolution requirements.",
-      image: "/placeholder.svg?height=400&width=600",
+        image: "/image/4.jpg",
     },
     {
       id: "rep",
@@ -48,11 +48,13 @@ export default function Features() {
       title: "Creative Reputation System",
       description:
         "Build reputation through music quality, model contributions, and verification participation. Gain priority access to datasets and weighted governance influence.",
-      image: "/placeholder.svg?height=400&width=600",
+        image: "/image/5.jpg",
     },
-  ]
+  ];
 
-  const selectedFeatureData = features.find((feature) => feature.id === selectedFeature)
+  const selectedFeatureData = features.find(
+    (feature) => feature.id === selectedFeature
+  );
 
   return (
     <section className="bg-gradient-to-b from-black via-purple-950/10 to-black py-20">
@@ -71,8 +73,8 @@ export default function Features() {
             </span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-400">
-            Tempo combines cutting-edge Web3 technology with AI to create a revolutionary ecosystem for music-driven
-            dance creation.
+            Tempo combines cutting-edge Web3 technology with AI to create a
+            revolutionary ecosystem for music-driven dance creation.
           </p>
         </motion.div>
 
@@ -104,7 +106,7 @@ export default function Features() {
               transition={{ duration: 0.5 }}
               className="mx-auto max-w-5xl"
             >
-              <Card className="overflow-hidden border-purple-900/50 bg-black/60 backdrop-blur-sm">
+              <Card className="overflow-hidden border-purple-900/50 bg-black/40 backdrop-blur-sm">
                 <CardContent className="p-0">
                   <div className="grid gap-6 md:grid-cols-2">
                     <div className="overflow-hidden bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-1">
@@ -120,8 +122,12 @@ export default function Features() {
                       <div className="mb-4 inline-flex rounded-full bg-purple-950/50 p-3">
                         {selectedFeatureData.icon}
                       </div>
-                      <h3 className="mb-4 text-2xl font-semibold text-white">{selectedFeatureData.title}</h3>
-                      <p className="text-gray-300">{selectedFeatureData.description}</p>
+                      <h3 className="mb-4 text-2xl font-semibold text-white">
+                        {selectedFeatureData.title}
+                      </h3>
+                      <p className="text-gray-300">
+                        {selectedFeatureData.description}
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -131,6 +137,5 @@ export default function Features() {
         </AnimatePresence>
       </div>
     </section>
-  )
+  );
 }
-

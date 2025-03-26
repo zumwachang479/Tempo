@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-black py-8">
+     <footer className="border-t border-zinc-800 bg-black py-8">
       <div className="container mx-auto px-4">
         <div className="mb-8 grid gap-8 md:grid-cols-4">
           <div>
@@ -96,7 +96,30 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <script
+     dangerouslySetInnerHTML={{
+       __html: `
+         window.difyChatbotConfig = {
+           token: '791oNyWYnGM7pg4t',
+           baseUrl: 'http://3.144.254.25'
+         }
+       `
+     }}
+   />
+   <script src="http://3.144.254.25/embed.min.js" id="791oNyWYnGM7pg4t" defer></script>
+   <style>{`
+     #dify-chatbot-bubble-button {
+       background-color: #1C64F2 !important;
+       top: 100px
+     }
+     #dify-chatbot-bubble-window {
+       width: 24rem !important;
+       height: 40rem !important;
+     }
+   `}</style>
     </footer>
+   
+   
   )
 }
 
