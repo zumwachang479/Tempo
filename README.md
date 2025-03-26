@@ -15,6 +15,8 @@ Move from closed platform distribution to an open decentralized marketplace.
 2. Technical Architecture
 2.1 Multi-Layer Protocol Architecture
 Flowchart
+![流程图](public/flow_en.png)
+
 2.2 Privacy and Security Technologies
 Federated Learning: Train dance generation models without sharing raw data.  
 Zero-Knowledge Proofs (ZKPs): Verify data origins and copyright compliance.  
