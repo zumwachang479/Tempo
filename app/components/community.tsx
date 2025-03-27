@@ -1,16 +1,22 @@
 "use client"
 
+import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { motion } from "framer-motion"
-
+import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent } from "@/components/ui/card"
 import { Code, Headphones, Paintbrush, Eye, CheckCircle } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog"
 
 const formSchema = z.object({
   email: z.string().email({
@@ -22,6 +28,7 @@ const formSchema = z.object({
 })
 
 export default function Community() {
+  const [showDialog, setShowDialog] = useState(false)
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -30,8 +37,15 @@ export default function Community() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
+    setShowDialog(true)
+    // 重置表单
+    form.reset()
+    // 3秒后自动关闭对话框
+    setTimeout(() => {
+      setShowDialog(false)
+    }, 3000)
   }
 
   const participants = [
@@ -219,6 +233,17 @@ export default function Community() {
           </motion.div>
         </div>
       </div>
+
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="bg-zinc-900/90 border-purple-900/50 backdrop-blur-sm">
+          <DialogHeader>
+            <DialogTitle className="text-center">thanks for your message</DialogTitle>
+            <p className="text-center text-gray-400 mt-2">
+            We will contact you as soon as possible
+            </p>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
