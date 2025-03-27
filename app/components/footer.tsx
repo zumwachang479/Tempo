@@ -90,7 +90,7 @@ export default function Footer() {
             <a href="#" className="text-gray-400 hover:text-purple-400">
               Twitter
             </a>
-            <a href="#" className="text-gray-400 hover:text-purple-400">
+            <a href="https://github.com/zumwachang479/tempomodel"   target="_blank"   rel="noopener noreferrer" className="text-gray-400 hover:text-purple-400">
               GitHub
             </a>
           </div>
