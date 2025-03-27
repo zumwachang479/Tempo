@@ -5,6 +5,7 @@ import Tokenomics from "./components/tokenomics"
 import Roadmap from "./components/roadmap"
 import Community from "./components/community"
 import Footer from "./components/footer"
+import CodeInstallation from "/components/codeInstallation";
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <Hero />
       <Vision />
       <Features />
+      <CodeInstallation/>
       <Tokenomics />
       <Roadmap />
       <Community />
