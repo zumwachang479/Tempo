@@ -96,30 +96,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <script
-     dangerouslySetInnerHTML={{
-       __html: `
-         window.difyChatbotConfig = {
-           token: '791oNyWYnGM7pg4t',
-           baseUrl: 'http://3.144.254.25'
-         }
-       `
-     }}
-   />
-   <script src="http://3.144.254.25/embed.min.js" id="791oNyWYnGM7pg4t" defer></script>
-   <style>{`
-     #dify-chatbot-bubble-button {
-       background-color: #1C64F2 !important;
-       top: 100px
-     }
-     #dify-chatbot-bubble-window {
-       width: 24rem !important;
-       height: 40rem !important;
-     }
-   `}</style>
     </footer>
-   
-   
   )
 }
 
