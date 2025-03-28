@@ -110,7 +110,8 @@ export default function Features() {
                 <CardContent className="p-0">
                   <div className="grid gap-6 md:grid-cols-2">
                     <div className="overflow-hidden bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-1">
-                      <div className="h-full w-full overflow-hidden bg-black">
+                      {/* 固定容器大小 300 x 400 */}
+                      <div className="w-[480px] h-[270px] bg-black">
                         {selectedFeatureData.id === "rdgp" ? (
                           <iframe
                             src="https://www.youtube.com/embed/tJlBt4FdQfE"

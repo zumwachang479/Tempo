@@ -106,13 +106,7 @@ export default function Contact() {
           </Form>
         </motion.div>
       </div>
-      <div className="absolute inset-0 z-0 opacity-30">
-        <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-          {Array.from({ length: 50 }).map((_, i) => (
-            <line key={i} x1={i * 2} y1="0" x2={i * 2} y2="100" stroke="white" strokeWidth="0.1" />
-          ))}
-        </svg>
-      </div>
+      
     </section>
   )
 }

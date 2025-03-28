@@ -230,6 +230,59 @@ export default function Community() {
                 </div>
               </a>
             </div>
+
+
+      {/* 开发人员列表 */}
+      <div className="container relative z-10 mx-auto px-4 mt-10">
+        <h3 className="text-center text-2xl font-bold mb-4">Developer List</h3>
+        <ul className="flex flex-wrap justify-center gap-4">
+          <li>
+            <a href="https://github.com/f" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/196477?s=64&v=4" alt="@f" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/iuzn" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/25708048?s=64&v=4" alt="@iuzn" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/fengkiej" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/14020439?s=64&v=4" alt="@fengkiej" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/JonathanDn" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/19703819?s=64&v=4" alt="@JonathanDn" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/developer-acc" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/96925396?s=64&v=4" alt="@developer-acc" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/devisasari" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/99514353?s=64&v=4" alt="@devisasari" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/ersinyilmaz" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/1352881?s=64&v=4" alt="@ersinyilmaz" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/burakcan" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/3121257?s=64&v=4" alt="@burakcan" className="rounded-full" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/willfeldman" target="_blank" rel="noopener noreferrer">
+              <img src="https://avatars.githubusercontent.com/u/13539982?s=64&v=4" alt="@willfeldman" className="rounded-full" />
+            </a>
+          </li>
+        </ul>
+      </div>
           </motion.div>
         </div>
       </div>
