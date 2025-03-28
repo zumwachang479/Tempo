@@ -69,7 +69,7 @@ export default function Tokenomics() {
           >
             <Card className="h-full border-purple-900/50 bg-black/60 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h3 className="mb-6 text-2xl font-semibold">Token Distribution</h3>
+                <h3 className="mb-6 text-2xl">Token Distribution</h3>
                 <p className="mb-6 text-gray-400">Total Supply: 1,000,000,000 $TEMPO</p>
                 <div className="space-y-4">
                   {tokenDistribution.map((item, index) => (
@@ -102,7 +102,7 @@ export default function Tokenomics() {
           >
             <Card className="h-full border-purple-900/50 bg-black/60 backdrop-blur-sm">
               <CardContent className="p-6">
-                <h3 className="mb-6 text-2xl font-semibold">Token Utility</h3>
+                <h3 className="mb-6 text-2xl">Token Utility</h3>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {tokenUtility.map((item, index) => (
                     <div key={index} className="rounded-lg border border-purple-900/50 bg-black/40 p-4">
