@@ -24,7 +24,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/zumwachang479/tempomodel"   target="_blank"   rel="noopener noreferrer" className="hover:text-purple-400">
+                <a href="https://github.com/zumwachang479/Tempo_Model"   target="_blank"   rel="noopener noreferrer" className="hover:text-purple-400">
                   GitHub
                 </a>
               </li>
