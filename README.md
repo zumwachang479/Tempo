@@ -4,7 +4,7 @@
   <img src="image.png" alt="logo">
 </p>
 
-Tempo is a decentralized Web3-based project dedicated to redefining the creation, distribution, and value allocation of dance videos through music-driven AI dance generation technology. We are buildin[...]
+Tempo is a decentralized Web3-based project dedicated to redefining the creation, distribution, and value allocation of dance videos through music-driven AI dance generation technology. 
 
 ## 1. Project Vision and Mission
 
