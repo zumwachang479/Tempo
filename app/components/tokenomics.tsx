@@ -55,8 +55,7 @@ export default function Tokenomics() {
             </span>
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-400">
-            The Tempo Token ($TEMPO) is the lifeblood of our ecosystem, powering access, governance, staking, and
-            payments.
+          Launching via a fair launch on Pump.fun, the Tempo Token ($TEMPO) is the lifeblood of our ecosystem, powering access, governance, staking, and payments.
           </p>
         </motion.div>
 
