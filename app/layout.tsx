@@ -18,7 +18,9 @@ export default function RootLayout({
           content="Tempo is a Web3 project using AI to generate dance videos from music, creating a decentralized creative ecosystem powered by $TEMPO."
         />
       </head>
-      <body className={`${inter.className} bg-black`}>{children}</body>
+      <body className={`${inter.className} bg-black`}>
+      <ContextProvider cookies={null}>{children}</ContextProvider>
+      </body>
     </html>
   )
 }
@@ -26,6 +28,7 @@ export default function RootLayout({
 
 
 import './globals.css'
+import ContextProvider from "./providers"
 
 export const metadata = {
       generator: 'v0.dev'

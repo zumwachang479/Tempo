@@ -48,6 +48,12 @@ export default function Hero() {
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
+       <div className="absolute top-4 right-4 z-30">
+      <div className="appkit-buttons-container">
+        <appkit-button />
+        <appkit-network-button />
+      </div>
+      </div>
       {/* Video Background */}
       <div className="absolute inset-0 h-full w-full bg-black">
         <video
@@ -62,7 +68,6 @@ export default function Hero() {
         >
           Your browser does not support the video tag.
         </video>
-
         {/* Dark overlay/mask for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80"></div>
 
