@@ -25,7 +25,7 @@ import {
   useWalletInfo
 } from '@reown/appkit/react'
 
-export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID// this is a public projectId only to use on localhost
+export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || '9157e813ef06bdfab2e521e1232f5fe4' // this is a public projectId only to use on localhost
 
 export const networks = [
   mainnet,
