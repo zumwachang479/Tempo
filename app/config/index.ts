@@ -54,10 +54,10 @@ const modal = createAppKit({
   adapters: [wagmiAdapter, solanaAdapter, bitcoinAdapter],
   networks,
   metadata: {
-    name: 'AppKit Next.js Wagmi Solana',
-    description: 'AppKit Next.js App Router with Wagmi Solana Adapters',
-    url: 'https://reown.com/appkit',
-    icons: ['https://avatars.githubusercontent.com/u/179229932?s=200&v=4']
+    name: 'The Web3 Music-Driven Dance Metaverse',
+    description: 'Redefining creative ownership through AI-generated dance, blockchain transparency, and decentralized collaboration',
+    url: 'https://tempo-vedio.xyz',
+    icons: ['https://tempo-vedio.xyz/ryf.png']
   },
   projectId,
   themeMode: 'light',
