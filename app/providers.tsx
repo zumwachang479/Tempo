@@ -19,10 +19,13 @@ if (!projectId) {
 
 // Set up metadata
 export const appKitMetadata = {
-  name: 'AppKit Next.js Wagmi',
-  description: 'AppKit Next.js App Router Wagmi Example',
-  url: 'https://appkit-lab.reown.com', // origin must match your domain & subdomain
-  icons: ['https://avatars.githubusercontent.com/u/179229932']
+  name: 'tempo vedio',
+  logo: 'https://tempo-vedio.xyz/ryf.png',
+  description: 'Redefining creative ownership through AI-generated dance, blockchain transparency, and decentralized collaboration',  
+  url: 'https://tempo-vedio.xyz', // origin must match your domain & subdomain
+  icons: ['https://tempo-vedio.xyz/ryf.png'],
+  keywords: ['tempo vedio', 'web3', 'dance metaverse', 'AI-generated dance', 'blockchain', 'decentralized collaboration'],
+  themeColor: '#000000', // Optional - defaults to #000000
 }
 
 // Create the modal

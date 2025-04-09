@@ -31,5 +31,5 @@ import './globals.css'
 import ContextProvider from "./providers"
 
 export const metadata = {
-      generator: 'v0.dev'
+      generator: 'tempo'
     };
