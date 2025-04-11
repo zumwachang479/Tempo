@@ -40,7 +40,7 @@ function ChatRoom() {
   const maxReconnectAttempts = 5;
   const reconnectTimeoutId = useRef<NodeJS.Timeout | null>(null);
 
-  const WEBSOCKET_URL = process.env.NEXT_PUBLIC_WEBSOCKET_URL || 'wss://3.144.254.25:8011/ws';
+  const WEBSOCKET_URL = process.env.NEXT_PUBLIC_WEBSOCKET_URL || 'wss://ai369.xyz:8011/ws';
 
   const connectWebSocket = useCallback(() => {
     // ... (connectWebSocket 逻辑保持不变) ...
@@ -116,7 +116,7 @@ function ChatRoom() {
         reconnectTimeoutId.current = setTimeout(connectWebSocket, delay);
       } else if (reconnectAttempts.current >= maxReconnectAttempts) {
         console.error('达到最大重连次数，停止重连。');
-        setMessages((prev) => [...prev, { type: 'error', message: 'please flush your browser。', timestamp: Date.now() / 1000 }]);
+        setMessages((prev) => [...prev, { type: 'error', message: 'please flush your browser', timestamp: Date.now() / 1000 }]);
       } else {
         console.log('WebSocket 正常关闭，不尝试重连。');
       }
@@ -126,7 +126,7 @@ function ChatRoom() {
       // ... (onerror 逻辑保持不变) ...
       console.error('WebSocket 错误:', error);
       setIsConnected(false);
-      setMessages((prev) => [...prev, { type: 'error', message: 'WebSocket 连接发生错误。', timestamp: Date.now() / 1000 }]);
+      setMessages((prev) => [...prev, { type: 'error', message: 'WebSocket connect error', timestamp: Date.now() / 1000 }]);
     };
   }, [WEBSOCKET_URL]);
 
@@ -253,7 +253,7 @@ function ChatRoom() {
                 disabled={!isConnected || !inputValue.trim()}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg px-5 py-2 transition-opacity duration-300 disabled:opacity-50 hover:opacity-90"
             >
-              发送
+              send message
             </Button>
           </div>
         </CardFooter>
