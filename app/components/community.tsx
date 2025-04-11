@@ -40,7 +40,7 @@ function ChatRoom() {
   const maxReconnectAttempts = 5;
   const reconnectTimeoutId = useRef<NodeJS.Timeout | null>(null);
 
-  const WEBSOCKET_URL = process.env.NEXT_PUBLIC_WEBSOCKET_URL || 'ws://3.144.254.25:8011/ws';
+  const WEBSOCKET_URL = process.env.NEXT_PUBLIC_WEBSOCKET_URL || 'wss://3.144.254.25:8011/ws';
 
   const connectWebSocket = useCallback(() => {
     // ... (connectWebSocket 逻辑保持不变) ...
